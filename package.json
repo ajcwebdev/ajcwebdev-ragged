@@ -1,0 +1,19 @@
+{
+  "name": "ajcwebdev-ragged",
+  "version": "1.0.0",
+  "description": "```bash mkdir ajcwebdev-ragged",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "openai": "^4.30.0",
+    "ragged": "^0.0.3",
+    "rxjs": "^7.8.1"
+  }
+}
