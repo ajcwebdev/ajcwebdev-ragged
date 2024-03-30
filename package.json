@@ -1,7 +1,7 @@
 {
   "name": "ajcwebdev-ragged",
   "version": "1.0.0",
-  "description": "```bash mkdir ajcwebdev-ragged",
+  "description": "Ragged example",
   "main": "index.js",
   "type": "module",
   "scripts": {
