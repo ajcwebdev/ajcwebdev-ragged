@@ -126,7 +126,6 @@ curl -X POST http://localhost:3001/predict \
 ```bash
 npm create vite@latest client -- --template react
 cd client
-rm -rf src/App.css
 npm i
 ```
 
