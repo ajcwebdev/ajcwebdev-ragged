@@ -1,30 +1,30 @@
-'use client';
+'use client'
 
-import { useState } from 'react';
-import styles from './page.module.css';
+import { useState } from 'react'
+import styles from './page.module.css'
 
 export default function Home() {
-  const [question, setQuestion] = useState('');
-  const [answer, setAnswer] = useState('');
+  const [question, setQuestion] = useState('')
+  const [answer, setAnswer] = useState('')
 
   const handleSubmit = async (e) => {
-    e.preventDefault();
+    e.preventDefault()
     try {
       const response = await fetch('/api/predict', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ question }),
-      });
+      })
       if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`);
+        throw new Error(`HTTP error! status: ${response.status}`)
       }
-      const data = await response.json();
-      setAnswer(data.answer);
+      const data = await response.json()
+      setAnswer(data.answer)
     } catch (error) {
-      console.error('Failed to fetch answer:', error);
-      setAnswer('Error fetching answer. Please check the console for more details.');
+      console.error('Failed to fetch answer:', error)
+      setAnswer('Error fetching answer. Please check the console for more details.')
     }
-  };
+  }
 
   return (
     <main className={styles.main}>
@@ -43,5 +43,5 @@ export default function Home() {
         {answer && <p>Answer: {answer}</p>}
       </div>
     </main>
-  );
+  )
 }
