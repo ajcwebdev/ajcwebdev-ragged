@@ -7,14 +7,13 @@ Initialize `package.json` and install dependencies:
 
 ```bash
 npm init -y
+npm pkg set type="module"
 npm install --save openai rxjs ragged dotenv
 ```
 
-Make sure to set `type` to `module` in `package.json`.
-
 ```bash
-echo '# Ragged' > README.md
-echo 'node_modules\n.DS_Store\n.env' > .gitignore
+printf '# Ragged' > README.md
+printf 'node_modules\n.DS_Store\n.env' > .gitignore
 ```
 
 Create `index.js` file:
@@ -35,7 +34,7 @@ const raggedClient = new Ragged({
 })
 
 raggedClient
-  .qPredict("What is Toronto?")
+  .predict("What is Toronto?")
   .then(console.log)
   .catch(console.error)
 ```
